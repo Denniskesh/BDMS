@@ -19,6 +19,19 @@ include('includes/config.php');
 			window.scrollTo(0, 1);
 		}
 	</script>
+	<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "8e0903ef-7ca3-41bf-93b3-b4a412635919", // The ID of this integration.
+    region: "eu-gb", // The region your integration is hosted in.
+    serviceInstanceID: "ffaa7d84-bfa5-4925-9505-ab4c0a25bac0", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
 	<!--// Meta tag Keywords -->
 
 	<!-- Custom-Files -->
@@ -99,7 +112,7 @@ include('includes/config.php');
 	<div class="clearfix"></div>
 
 	<?php include('includes/footer.php');?>
-
+	
 </body>
 
 </html>

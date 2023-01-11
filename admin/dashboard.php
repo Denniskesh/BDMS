@@ -115,7 +115,7 @@ $query=$query6->rowCount();
 											<div class="panel-body bk-info text-light">
 												<div class="stat-panel text-center">
 												<?php 
-$sql6 ="SELECT ID  from tblbloodrequirer ";
+$sql6 ="SELECT id  from tblbloodrequirer ";
 $query6 = $dbh -> prepare($sql6);;
 $query6->execute();
 $results6=$query6->fetchAll(PDO::FETCH_OBJ);
